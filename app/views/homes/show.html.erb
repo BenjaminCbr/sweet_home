@@ -8,3 +8,12 @@
 <p>
   The service is entirely free, and is meant to stay that way.
 </p>
+
+<%= button_to 'Launch test job', test_jobs_path %>
+
+<%= button_to 'Reset Counter', counter_path(0), method: :delete %>
+
+
+<p>
+  For now, the counter value is <span id="counter-value"><%= @counter_value %></span>.
+</p>
