@@ -10,6 +10,9 @@ gem 'bootstrap'
 gem 'rails-assets-tether'
 gem 'sidekiq'
 
+# React dependency
+gem 'react-rails'
+
 #### Group of default gems coming with Rails install
 
 gem 'execjs'
