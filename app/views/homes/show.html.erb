@@ -1,24 +1,3 @@
 <%= render 'common/navbar' %>
-
-<p>
-  Welcome to Sweet Home website, we hope that you'll find your next home
-  with us.
-</p>
-
-<p>
-  The service is entirely free, and is meant to stay that way.
-</p>
-
-<%= button_to 'Launch test job', test_jobs_path, class: 'btn btn-primary' %>
-
-<%= button_to 'Reset Counter', counter_path(0), method: :delete, class: 'btn btn-danger' %>
-
-
-<p>
-  For now, the counter value is <span id="counter-value"><%= @counter_value %></span>.
-</p>
-
-
-<p>
-  React Counter <%= react_component 'TestCounter', { counter_value: @counter_value } %>
-</p>
+<%= render 'homes/top_hero' %>
+<%= render 'common/react_counter_test' %>
