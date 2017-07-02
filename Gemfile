@@ -7,6 +7,7 @@ end
 
 
 gem 'bootstrap'
+gem 'pg'
 gem 'rails-assets-tether'
 gem 'sidekiq'
 
