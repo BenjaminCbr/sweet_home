@@ -7,6 +7,7 @@ end
 
 
 gem 'bootstrap'
+gem 'devise'
 gem 'pg'
 gem 'rails-assets-tether'
 gem 'sidekiq'
@@ -59,6 +60,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pry'
+  gem 'pry-doc'
   gem 'byebug'
 end
 
