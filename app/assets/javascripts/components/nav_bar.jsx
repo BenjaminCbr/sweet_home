@@ -1,18 +1,18 @@
 class NavBar extends React.Component {
 
   render() {
-   return <nav className="navbar navbar-toggleable-md navbar-inverse navbar-fixed-top bg-inverse">
-     <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-       <span className="navbar-toggler-icon"></span>
-     </button>
-     <a className="navbar-brand ml-md-5" href="#">
-       Sweet Home
-     </a>
+    return <nav className="navbar navbar-toggleable-md navbar-inverse navbar-fixed-top bg-inverse">
+      <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <a className="navbar-brand ml-md-5" href="#">
+        Sweet Home
+      </a>
 
-     <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-       {this.render_links()}
-     </div>
-   </nav>
+      <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+        {this.render_links()}
+      </div>
+    </nav>
   }
 
   render_links() {
@@ -26,8 +26,13 @@ class NavBar extends React.Component {
 
   render_signed_in_user_links() {
     return <ul className="navbar-nav navbar-right">
-      <li className="nav-item">
-        <a className="nav-link mr-md-5" data-method="delete" href={this.props.sign_out_url}>{this.props.user_name}</a>
+      <li className="nav-item dropdown">
+        <a className="nav-link mr-md-5 dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {this.props.user_name}
+        </a>
+        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a className="dropdown-item" data-method="delete" href={this.props.sign_out_url}>Sign Out</a>
+        </div>
       </li>
     </ul>
   }
