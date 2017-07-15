@@ -1,13 +1,7 @@
-<div class="container">
-  <%= button_to 'Launch test job', test_jobs_path, class: 'btn btn-primary' %>
+<div class="container mt-5">
+  <%= button_to 'Async Increment Counter', test_jobs_path, class: 'btn btn-primary' %>
 
   <%= button_to 'Reset Counter', counter_path(0), method: :delete, class: 'btn btn-danger' %>
 
-  <p>
-    For now, the counter value is <span id="counter-value"><%= @counter_value %></span>.
-  </p>
-
-  <p>
     React Counter <%= react_component 'TestCounter', { counter_value: @counter_value } %>
-  </p>
 </div>
