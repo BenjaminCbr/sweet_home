@@ -3,5 +3,5 @@
 
   <%= button_to 'Reset Counter', counter_path(0), method: :delete, class: 'btn btn-danger' %>
 
-    React Counter <%= react_component 'TestCounter', { counter_value: @counter_value } %>
+    React Counter <%= react_component 'TestCounter', props: { counter_value: @counter_value } %>
 </div>

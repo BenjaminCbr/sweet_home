@@ -1,4 +1,6 @@
-class NavBar extends React.Component {
+import React from 'react';
+
+export default class NavBar extends React.Component {
 
   render() {
     return <nav className="navbar navbar-toggleable-md navbar-inverse navbar-fixed-top bg-inverse">

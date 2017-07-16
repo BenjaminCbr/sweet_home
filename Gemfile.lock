@@ -38,13 +38,11 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.1)
+      public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
     autoprefixer-rails (6.7.5)
       execjs
-    babel-source (5.8.35)
-    babel-transpiler (0.7.0)
-      babel-source (>= 4.0, < 6)
-      execjs (~> 2.0)
     bcrypt (3.1.11)
     bootstrap (4.0.0.alpha6)
       autoprefixer-rails (>= 6.0.3)
@@ -71,6 +69,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.17)
+    foreman (0.84.0)
+      thor (~> 0.19.1)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.8.0)
@@ -81,6 +81,7 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    libv8 (5.3.332.38.5)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -93,6 +94,8 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
+    mini_racer (0.1.9)
+      libv8 (~> 5.3)
     minitest (5.10.1)
     multi_json (1.12.1)
     nio4r (1.2.1)
@@ -104,11 +107,15 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-byebug (3.4.2)
+      byebug (~> 9.0)
+      pry (~> 0.10)
     pry-doc (0.10.0)
       pry (~> 0.9)
       yard (~> 0.9)
     pry-rails (0.3.6)
       pry (>= 0.10.4)
+    public_suffix (2.0.5)
     puma (3.7.0)
     rack (2.0.1)
     rack-protection (2.0.0)
@@ -139,16 +146,18 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    rainbow (2.2.2)
+      rake
     rake (12.0.0)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
-    react-rails (2.2.0)
-      babel-transpiler (>= 0.7.0)
+    react_on_rails (8.0.5)
+      addressable
       connection_pool
-      execjs
-      railties (>= 3.2)
-      tilt
+      execjs (~> 2.5)
+      rails (>= 3.2)
+      rainbow (~> 2.2)
     redis (3.3.3)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
@@ -196,6 +205,10 @@ GEM
       activemodel (>= 5.0)
       debug_inspector
       railties (>= 5.0)
+    webpacker_lite (2.0.4)
+      activesupport (>= 4.2)
+      multi_json (~> 1.2)
+      railties (>= 4.2)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -210,17 +223,20 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   execjs
+  foreman
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  mini_racer
   pg
   pry
+  pry-byebug
   pry-doc
   pry-rails
   puma (~> 3.0)
   rails (~> 5.0.1)
   rails-assets-tether
-  react-rails
+  react_on_rails
   redis
   sass-rails (~> 5.0)
   sidekiq
@@ -231,6 +247,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
+  webpacker_lite
 
 BUNDLED WITH
    1.14.4
